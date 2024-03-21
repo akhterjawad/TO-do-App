@@ -20,25 +20,45 @@
 
 
 const inputs = document.querySelector('#todo')
-const ol = document.querySelector('ol')
+const div = document.querySelector('div')
 let jawad = []
 
 function addtodo() {
     jawad.push(inputs.value)
-    ol.innerHTML = ``
+    div.innerHTML = ``
     console.log(jawad);
     inputs.value = '';
     
     for (let i = 0; i < jawad.length; i++) {
         
-        ol.innerHTML += `<p>
+        div.innerHTML += `<p>
         ${jawad[i]} 
-        <button onclick="deleted()">delete</button>
-        <button onclick="edit()">edit</button>
+        <button onclick="deleted(${i})">delete</button>
+        <button onclick="edit(${i})">edit</button>
         </p>`;
     }
 
 }
-function deleted() {
+function deleted(inedxNo) {
+    console.log(`delete todo`,inedxNo);
+    jawad.splice(inedxNo,1);
+}
+
+function edit(inedxNo) {
+    console.log(`edit todo`,inedxNo);
+    jawad.splice(inedxNo,1);
+
+}
+
+
+function deleteRow() {
+    div.innerHTML=``
+    for (let i = 0; i < jawad.length; i++) {
+        div.innerHTML += `<p>
+        ${jawad[i]} 
+        <button onclick="deleted(${i})">delete</button>
+        <button onclick="edit(${i})">edit</button>
+        </p>`;
+    }
     
 }

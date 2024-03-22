@@ -1,64 +1,48 @@
-// const div = document.querySelector('div')
-// let fruits = ['apple' , 'banana','orange' , 'anar', 'grapes']
-// for (let i = 0; i < fruits.length; i++) {
-
-//     div.innerHTML += `<p>${fruits[i]}</p>`;
-
-// }
-
-
-// function render() {
-//     for (let i = 0; i < jawad.length; i++) {
-
-        
-//     }
-
-
-
-// }
-
-
 
 const inputs = document.querySelector('#todo')
-const div = document.querySelector('div')
-let jawad = []
+const span = document.querySelector('#span')
+let todoApp = []
 
 function addtodo() {
-    jawad.push(inputs.value)
-    div.innerHTML = ``
-    console.log(jawad);
+    todoApp.push(inputs.value)
+    span.innerHTML = ``
+    console.log(todoApp);
     inputs.value = '';
-    
-    for (let i = 0; i < jawad.length; i++) {
-        
-        div.innerHTML += `<p>
-        ${jawad[i]} 
+    // deleteRow()
+
+    for (let i = 0; i < todoApp.length; i++) {
+
+        span.innerHTML += `<p>
+        ${todoApp[i]} 
         <button onclick="deleted(${i})">delete</button>
         <button onclick="edit(${i})">edit</button>
         </p>`;
     }
 
 }
-function deleted(inedxNo) {
-    console.log(`delete todo`,inedxNo);
-    jawad.splice(inedxNo,1);
+function deleted(indexNo) {
+    console.log(`delete todo`, indexNo);
+    todoApp.splice(indexNo, 1);
+    deleteRow()
 }
 
-function edit(inedxNo) {
-    console.log(`edit todo`,inedxNo);
-    jawad.splice(inedxNo,1);
+function edit(indexNo) {
+    let editValue = prompt('Enter Ubbdated Value', todoApp[indexNo])
 
+    console.log(`edit todo`, indexNo);
+    todoApp.splice(indexNo, 1, editValue);
+    deleteRow()
 }
 
 
 function deleteRow() {
-    div.innerHTML=``
-    for (let i = 0; i < jawad.length; i++) {
-        div.innerHTML += `<p>
-        ${jawad[i]} 
+    span.innerHTML = ``
+    for (let i = 0; i < todoApp.length; i++) {
+        span.innerHTML += `<p>
+        ${todoApp[i]} 
         <button onclick="deleted(${i})">delete</button>
         <button onclick="edit(${i})">edit</button>
         </p>`;
     }
-    
+
 }

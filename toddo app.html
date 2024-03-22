@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        background-image: linear-gradient(to left, red, yellow);
+    }
+
+    div {
+        text-align: center !important;
+    }
+
+    .addtodo {
+        padding: 1%;
+        border-radius: 50%;
+        border: none;
+        color: whitesmoke;
+        background-color: blue;
+    }
+
+    .span {
+        font-size: 0.9rem;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    input {
+        border: none;
+        padding: 1%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+    }
+</style>
+
 <body>
-    <h1>hello todo app</h1>
-<input type="text" placeholder="enter todo" id="todo">
+    <div>
+        <h1>Hello-todo-app</h1>
+        <input type="text" placeholder="enter as you need" id="todo">
 
-<button onclick="addtodo()">add todo</button>
-<!-- <ol></ol> -->
-    <div></div>
+        <button onclick="addtodo()" class="addtodo"><span class="span">⏎</span></button>
+        <!-- <ol></ol> -->
+        <span id="span"></span>
+    </div>
 
 
-    
+
     <script src="toddoapp.js"></script>
 </body>
+
 </html>

@@ -1,22 +1,22 @@
 
 const inputs = document.querySelector('#todo')
-const span = document.querySelector('#span')
+const ul = document.querySelector('#ul')
 let todoApp = []
 
 function addtodo() {
     todoApp.push(inputs.value)
-    span.innerHTML = ``
+    ul.innerHTML = ``
     console.log(todoApp);
     inputs.value = '';
     // deleteRow()
 
     for (let i = 0; i < todoApp.length; i++) {
 
-        span.innerHTML += `<p>
+        ul.innerHTML += `<li>
         ${todoApp[i]} 
-        <button onclick="deleted(${i})">delete</button>
-        <button onclick="edit(${i})">edit</button>
-        </p>`;
+        <button class="buttons" onclick="deleted(${i})">Remove</button>
+        <button class="buttons" onclick="edit(${i})">Change</button>
+        </li>`;
     }
 
 }
@@ -36,13 +36,13 @@ function edit(indexNo) {
 
 
 function deleteRow() {
-    span.innerHTML = ``
+    ul.innerHTML = ``
     for (let i = 0; i < todoApp.length; i++) {
-        span.innerHTML += `<p>
+        ul.innerHTML += `<li>
         ${todoApp[i]} 
-        <button onclick="deleted(${i})">delete</button>
-        <button onclick="edit(${i})">edit</button>
-        </p>`;
+        <button class="buttons" onclick="deleted(${i})">Remove</button>
+        <button class="buttons" onclick="edit(${i})">Change</button>
+        </li>`;
     }
 
 }

@@ -5,18 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <style>
     body {
         background-image: linear-gradient(to left, red, yellow);
+        z-index: 1;
+
     }
 
-    div {
+    .div {
         text-align: center !important;
+        width: 80%;
+        /* width: 280px; */
+        border: 5px solid black;
+        margin: 0 auto;
     }
+
 
     .addtodo {
-        padding: 1%;
+        padding: 0.5rem;
         border-radius: 50%;
         border: none;
         color: whitesmoke;
@@ -33,20 +46,40 @@
 
     input {
         border: none;
-        padding: 1%;
+        padding: 0.5rem;
         background-color: rgb(255, 255, 255);
         border-radius: 5px;
+    }
+
+    .buttons {
+        padding: 2%;
+        border-radius: 5px;
+        border: none;
+        color: whitesmoke;
+        background-color: black;
+    }
+
+    .smallDiv {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    ol {
+        margin: 0 auto;
     }
 </style>
 
 <body>
-    <div>
+    <div class="div">
         <h1>Hello-todo-app</h1>
         <input type="text" placeholder="enter as you need" id="todo">
 
         <button onclick="addtodo()" class="addtodo"><span class="span">⏎</span></button>
-        <!-- <ol></ol> -->
-        <span id="span"></span>
+        <div class="smallDiv">
+            <ul id="ul"></ul>
+        </div>
+        <!-- <span id="span"></span> -->
+
     </div>
 
 

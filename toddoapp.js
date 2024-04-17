@@ -26,15 +26,6 @@ function deleted(indexNo) {
     deleteRow()
 }
 
-function edit(indexNo) {
-    let editValue = prompt('Enter Ubbdated Value', todoApp[indexNo])
-
-    console.log(`edit todo`, indexNo);
-    todoApp.splice(indexNo, 1, editValue);
-    deleteRow()
-}
-
-
 function deleteRow() {
     ul.innerHTML = ``
     for (let i = 0; i < todoApp.length; i++) {
@@ -46,3 +37,12 @@ function deleteRow() {
     }
 
 }
+
+function edit(indexNo) {
+    let editValue = prompt('Enter Ubbdated Value', todoApp[indexNo])
+
+    console.log(`edit todo`, indexNo);
+    todoApp.splice(indexNo, 1, editValue);
+    deleteRow()
+}
+

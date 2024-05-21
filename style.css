@@ -1,5 +1,5 @@
 body {
-background-image: url(./04.18_TheFold_DottedNotebooks_Index_\(1\).gif);
+    background-image: url(./04.18_TheFold_DottedNotebooks_Index_\(1\).gif);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,27 +9,29 @@ background-image: url(./04.18_TheFold_DottedNotebooks_Index_\(1\).gif);
 
 }
 
-.div-1{
+.div-1 {
     text-align: center !important;
     width: 80%;
     /* width: 280px; */
-    border: 5px solid black ;
+    border: 5px solid black;
     margin-top: 20px !important;
     margin: auto;
-    
+
 }
-h1{
+
+h1 {
     padding-top: 10px;
     font-size: 2rem;
 }
 
-li{
-   margin: 1px; 
-   padding: 0% !important;
+li {
+    margin: 1px;
+    padding: 0% !important;
 }
+
 .button-main {
     padding: 0.4rem !important;
-    padding-bottom:0.6rem !important;
+    padding-bottom: 0.6rem !important;
     border-radius: 50%;
     width: 2.3rem;
     border: none;
